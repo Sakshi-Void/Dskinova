@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mobile overflow safety: prevent accidental horizontal scroll on small screens */
+html,
+body,
+#root {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Smooth anchor scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom utility classes for the reviews slider */
+@layer utilities {
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Line clamp utilities for review text */
+  .line-clamp-12 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 12;
+  }
+
+  .line-clamp-14 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 14;
+  }
+}
+
+/* (unused) */
+
+/* Contact page mobile tweaks without affecting desktop */
+@media (max-width: 767px) {
+  /* Adjust hero background crop for small screens */
+  .contact-hero {
+    background-position: center top;
+  }
+}

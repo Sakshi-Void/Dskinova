@@ -1,3 +1,34 @@
+# Node.js dependencies
 node_modules/
-node_modules
-/node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Runtime data
+.DS_Store
+*.tgz
+*.lock
+
+# Build output
+dist/
+build/
+coverage/
+out/
+
+# Vite / React specific
+.vite/
+.vscode/
+.idea/

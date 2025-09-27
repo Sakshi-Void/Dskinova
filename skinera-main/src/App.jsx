@@ -10,6 +10,7 @@ import { AdminLogin, Dashboard } from "./adminroutes/index.js";
 import GalleryPage from "./components/GalleryPage.jsx";
 import ReviewsDemo from "./components/ReviewsDemo.jsx";
 import Wellness from "./components/Wellness.jsx";
+import SocialBar from "./components/SocialBar";   // ✅ added
 
 export default function App() {
   return (
@@ -32,6 +33,8 @@ export default function App() {
         <Route path="/reviews-demo" element={<ReviewsDemo />} />
         <Route path="/wellness" element={<Wellness />} />
       </Routes>
+
+      <SocialBar />   {/* ✅ added */}
     </Router>
   );
 }
